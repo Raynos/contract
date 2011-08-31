@@ -1,3 +1,5 @@
+// # [Github Repo](https://github.com/Raynos/contract)
+
 // A method that generates a function which will wrap the function `f` and
 // call the pre condition with (arg1, arg2, ...)
 var constructPre = function _constructPre(f, pre) {
