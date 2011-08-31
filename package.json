@@ -10,7 +10,8 @@
 		 
 	},
 	"devDependencies": {
-		"vows-is": "0.1.28",
+		"should": "0.3.1",
+		"vows-is": "0.1.30",
 		"docco": "0.3.0"
 	},
 	"keywords": ["contract", "contracts", "design", "validation"],
