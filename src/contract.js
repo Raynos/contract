@@ -1,3 +1,4 @@
+// # [Github Repo](https://github.com/Raynos/contract)
 // The contract object.
 var Contract = {
 	// A method that generates a function which will wrap the function and
