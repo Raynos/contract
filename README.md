@@ -33,7 +33,7 @@ The contract methods can be invoked in three different ways.
  - `f = contract(f).pre(pre_cb).valueOf();`
  - `f = contract.pre(pre_cb, f);`
 
-### contract <a name="_contract" id="#_contract"><small><sup>link</sup></small></a>
+### contract <a name="_contract" href="#_contract"><small><sup>link</sup></small></a>
 
 options is hash that can be passed various values:
 
@@ -41,7 +41,7 @@ options is hash that can be passed various values:
 
     var contract = require("contract")(options)
 
-### contract.pre <a name="contract.pre" id="#contract.pre"><small><sup>link</sup></small></a>
+### contract.pre <a name="contract.pre" href="#contract.pre"><small><sup>link</sup></small></a>
 
 `pre` allows you to assign a pre contract. Here you can assert that the arguments the function is invoked with should pass certain conditions.
 
@@ -51,7 +51,7 @@ The pre contract will be invoked before the function is invoked.
         // assert things about the arguments
     }, f)
 
-### contract.post <a name="contract.post" id="#contract.post"><small><sup>link</sup></small></a>
+### contract.post <a name="contract.post" href="#contract.post"><small><sup>link</sup></small></a>
 
 `post` allows you to assign a post contract. Here you can assert that the return value matches certain conditions.
 
@@ -61,7 +61,7 @@ The post contract will be invoked after the function is invoked
         // assert things about the return value
     }, f);
 
-### contract.invariant <a name="contract.invariant" id="#contract.invariant"><small><sup>link</sup></small></a>
+### contract.invariant <a name="contract.invariant" href="#contract.invariant"><small><sup>link</sup></small></a>
 
 `invariant` allows you to assign a invariant contract. Here you can assert that there are no unexpected side effects during the function call.
 
