@@ -6,8 +6,8 @@ var Account = {
         this.balance -= money;
     },
     transfer: function(ac, money) {
-        this.balance -= money;
-        ac.balance += money;
+        this.withdraw(money);
+        ac.deposit(money);
     },
     statement: function() {
         return this.balance;

@@ -4,9 +4,13 @@ var contract = require("../../../src/contract.js")(),
 module.exports = function _bindContracts(object) {
     var ac = object.Account;
 
-    ac.deposit = ac.deposit.pre(function(amount) {
+    var testAmount = function(amount) {
         should.exist(amount);
         amount.should.be.above(0);
+    };
+
+    ac.deposit = ac.deposit.pre(function(amount) {
+        testAmount.call(this, amount);
     }).post(function (ret, amount) {
         should.not.exist(ret);
     }).invariant(function(before, amount) {
@@ -14,8 +18,8 @@ module.exports = function _bindContracts(object) {
     });
 
     ac.withdraw = ac.withdraw.pre(function(amount) {
-        should.exist(amount);
-        amount.should.be.above(0);
+        testAmount.call(this, amount);
+        amount.should.be.below(this.balance);
     }).post(function(ret, amount) {
         should.not.exist(ret);
     }).invariant(function (before, amount) {
@@ -32,8 +36,9 @@ module.exports = function _bindContracts(object) {
 
     ac.transfer = ac.transfer.pre(function(ac, amount) {
         should.exist(ac);
-        ac.should.be.an.instanceof(object.Account);
-        should.exist(amount);
-        amount.should.be.above(0);
-    })
+        ac.should.have.property("deposit");
+        testAmount.call(this, amount);
+    }).post(function(ret) {
+        should.not.exist(ret);
+    });
 };
