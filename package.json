@@ -1,0 +1,21 @@
+{
+	"name": "contract",
+	"description": "A design by contract library",
+	"version": "0.1.0",
+	"author": "Raynos <raynos2@gmail.com>",
+	"contributors": [
+		{ "name": "Raynos", "email": "raynos2@gmail.com", "url":"http://raynos.org" }
+	],
+	"dependencies": {
+		 
+	},
+	"devDependencies": {
+		"vows-is": "0.1.25",
+		"docco": "0.3.0"
+	},
+	"keywords": ["contract", "contracts", "design", "validation"],
+	"repository": "git://github.com/Raynos/contract.git",
+	"main": "contract",
+	"scripts": {},
+	"engines": { "node": "0.4.x" }
+}
