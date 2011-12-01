@@ -2,6 +2,8 @@
 
 A small library to cleanly implement [design by contract][1].
 
+## Status: beta
+
 Motivation :
 
 	var f = function(a, b) {
