@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/Raynos/contract.png)](http://travis-ci.org/Raynos/contract)
 # contracts <a name="contracts" href="#contracts"><small><sup>link</sup></small></a>
 
 A small library to cleanly implement [design by contract][1].
